@@ -1,6 +1,6 @@
 {
   "name": "blue-mock-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "mock server in your cli tool",
   "main": "index.js",
   "scripts": {

@@ -1,7 +1,7 @@
 //路由配置
 const routeOpts = {
   url: ``,
-  type: `get`,
+  method: `get`,
   response(req, res) {
     res.send({});
   }

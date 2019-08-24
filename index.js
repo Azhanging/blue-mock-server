@@ -3,7 +3,7 @@ const utils = require("blue-utils");
 const chokidar = require('chokidar');
 
 //路由的配置
-const routerOpts = require("./route-opts");
+const routeOpts = require("./route-opts");
 
 
 //注册路由
@@ -14,9 +14,9 @@ function registerRouter(opts) {
   let startIndex = routerStack.length;
 
   utils.each(mockApi, (opts) => {
-    const _opts = utils.extend(routerOpts, opts);
-    const { url, type, response } = _opts;
-    app[type](url, (req, res) => {
+    const _opts = utils.extend(routeOpts, opts);
+    const { url, method, response } = _opts;
+    app[method](url, (req, res) => {
       return response(req, res);
     });
   });
